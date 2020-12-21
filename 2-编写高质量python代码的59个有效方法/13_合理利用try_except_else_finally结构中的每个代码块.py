@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+print(f"{'-'*16}13_合理利用try_except_else_finally结构中的每个代码块{'-'*16}")
+
 num_list = [i for i in range(10)]
 
 try:
@@ -16,3 +18,5 @@ finally:
     new_list = [round(data, 3) for data in new_list]
     print(f"最终得到的列表长度为：{len(new_list)}, 数据如下：")
     print(new_list)
+
+print(f"{'-'*16}13_合理利用try_except_else_finally结构中的每个代码块{'-'*16}")

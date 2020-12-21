@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from sys import getsizeof
 
-print(f"{'-'*16}3-了解bytes,str和unicode的区别{'-'*16}")
+print(f"{'-'*16}3_了解bytes与str和unicode的区别{'-'*16}")
 
 # 1. bytes 函数:
 # Python3 内置函数, 返回一个新的 bytes 对象，
@@ -63,4 +63,7 @@ chinese_str_size = getsizeof(chinese_str)
 print(f"chinese_str[{chinese_str_size}] = [{chinese_str}]")
 print(f"类型为：{type(chinese_str)}")
 
-print(f"{'-'*16}3-了解bytes,str和unicode的区别{'-'*16}")
+print(f"python内置函数参考链接：\n"
+      f"https://www.runoob.com/python3/python3-built-in-functions.html")
+
+print(f"{'-'*16}3_了解bytes与str和unicode的区别{'-'*16}")
