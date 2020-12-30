@@ -29,9 +29,9 @@ def get_first_int(values, key, default=0):
     else:
         found = default
     return found
-red = get_first_int(my_values, "red", 0)
-green = get_first_int(my_values, "green", 0)
-opacity = get_first_int(my_values, "opacity", 0)
+red = get_first_int(my_values, "red", 1)
+green = get_first_int(my_values, "green", 1)
+opacity = get_first_int(my_values, "opacity", 1)
 print(f"red = {red}")
 print(f"green = {green}")
 print(f"opacity = {opacity}")
