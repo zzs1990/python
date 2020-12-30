@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+--Author: zhangzs
 # list的显著特征：
 # 列表中的每个元素都可变的，意味着可以对每个元素进行修改和删除；
 # 列表是有序的，每个元素的位置是确定的，可以用索引去访问每个元素；
@@ -8,10 +9,10 @@
 # 参考链接：https://www.cnblogs.com/pychina/p/10219772.html
 """
 
-print(f"{'-'*16}1_列表基本操作{'-'*16}")
+print(f"{'-'*16}1_列表list基本操作{'-'*16}")
 
 
-# 定义12个函数，代表12种不同的列表操作
+# 定义以下函数，代表不同的列表操作
 def func_1():
     """
     1.直接创建列表 -- 形如 new_list = [1, 2, 3]
@@ -171,20 +172,44 @@ def func_12():
     print(f"两个列表嵌套，每个元素相加得到的新列表为: {my_list}")
 
 
+def func_13():
+    """
+    13.将序列转换为列表 -- list(seq), 可理解为类型转换
+    """
+    my_list = list("Hello World")
+    print(f"将字符串'{'Hello World'}'转换为列表: {my_list}")
+    my_list = list((1, 2, 3))
+    print(f"将元组'{(1, 2, 3)}'转换为列表: {my_list}")
+
+
+# ------------------ 以下为固定内容，修改请告知作者 ------------------
+# 动态获取当前文件中定义的以 func_[数字] 命名的函数个数
+func_num = 0
+while True:
+    try:
+        func_name = f"func_{func_num+1}"
+        eval(func_name)
+        func_num += 1
+    except NameError:
+        break
+
 # function_docs 用于保存每条目录的基本描述信息，来源于函数的doc描述
-function_docs = ["start"]
+function_docs = ["START"]
 # catalog 字典结构：目录 + 对应操作函数
 catalog = dict()
-for j in range(1, 13):
+for j in range(1, func_num+1):
     func_name = f"func_{j}"
     # 注1：eval() 可以把字符串里的字符转换为可执行代码，但只支持一行字符
     function_docs.append(eval(func_name).__doc__.split("\n")[1].strip())
     # 更新字典：{目录信息: 函数名}
     catalog.update({f"{function_docs[j]}": eval(func_name)})
 
+# 循环执行当前文件中定义的以 func_[数字] 命名的所有函数
 for content in catalog.keys():
     func = catalog.get(content)
-    print(f"\033[40;36m {content}: \033[0m")
+    print(f"\033[42;31m {content}: \033[0m")
     func()
+function_docs.append("END")
+# ------------------ 以上为固定内容，修改请告知作者 ------------------
 
-print(f"{'-'*16}1_列表基本操作{'-'*16}")
+print(f"{'-'*16}1_列表list基本操作{'-'*16}")
