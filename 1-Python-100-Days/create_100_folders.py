@@ -15,8 +15,7 @@ def main():
             os.mkdir(folder_name)
             py_name = f"day_{i}_learning.py"
             os.chdir(folder_path)
-            if not os.path.exists(py_name):
-                shutil.copy2(module_py_path, py_name)
+            shutil.copy2(module_py_path, py_name)
             folder_list = [
                 "src",
                 "tests",
