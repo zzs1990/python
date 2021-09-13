@@ -1,0 +1,8 @@
+1. Q：运行报错：
+    DLL load failed while importing _pywrap_tensorflow_internal: 找不到指定的模块
+A1：protobuf的版本不匹配：pip install protobuf==3.9.2
+    tensorflow要求protobuf>=3.9.2
+A2: 安装2.1.0版本程序包需要msvcp140_1.dll文件
+    https://www.tensorflow.org/install/errors
+    打不开，搜索安装即可vcredist_x64.exe
+    仍不成功，则重新安装tensorflow

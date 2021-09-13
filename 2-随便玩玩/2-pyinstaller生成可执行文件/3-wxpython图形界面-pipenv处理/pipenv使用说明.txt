@@ -1,0 +1,18 @@
+1. 安装
+pip install pipenv
+
+2. 选择一个目录作为虚拟环境，在该目录下：
+pipenv install --python 3.8
+
+3. 修改下载源：
+打开Pipfile文件，修改其中的 url 为 
+https://pypi.tuna.tsinghua.edu.cn/simple
+
+4. 命令行下激活环境：
+pipenv shell
+
+5. 安装依赖库：
+pipenv install wxPython==4.1.1
+
+5. 打包文件
+pyinstaller -F -w --distpath Release/ --clean wxHelloWorld.py
