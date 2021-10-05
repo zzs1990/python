@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # 用法：zip(*iterables)
 # 将多个可迭代对象从左到右一一对应拆分为元组，然后组成一个新的可迭代对象
-print(help("zip"))
+# print(help("zip"))
 
 
 def zip_test():
